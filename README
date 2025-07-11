@@ -10,9 +10,5 @@
 - Mobile responsive layout
 - Rate-limited to prevent API overuse
 
-## 🛠️ Tech Stack
-
-- **Backend**: Python + Flask
-- **Frontend**: HTML, CSS, JavaScript
 - **API**: [ADSBExchange API](https://www.adsbexchange.com/)
 - API is accessed through Rapid API and you'll need to add your own key
