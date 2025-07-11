@@ -1,0 +1,18 @@
+# Planes Near Me ✈️
+
+**Planes Near Me** is a web app that shows nearby aircraft in real time using location-based data from the ADS-B Exchange API. Built with Flask (Python) and a lightweight HTML/CSS/JS frontend, it offers a simple interface to see which planes are flying nearby.
+
+## 🚀 Features
+
+- Detects your approximate location (with permission)
+- Lists nearby planes, distance, and altitude
+- Includes tracking links to FlightAware and Flightradar24
+- Mobile responsive layout
+- Rate-limited to prevent API overuse
+
+## 🛠️ Tech Stack
+
+- **Backend**: Python + Flask
+- **Frontend**: HTML, CSS, JavaScript
+- **API**: [ADSBExchange API](https://www.adsbexchange.com/)
+- API is accessed through Rapid API and you'll need to add your own key
