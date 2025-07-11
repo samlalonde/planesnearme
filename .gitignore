@@ -1,0 +1,28 @@
+# Python virtual environment
+venv/
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+
+# Mac / Linux / Windows system files
+.DS_Store
+Thumbs.db
+
+# Flask-specific
+instance/
+.webassets-cache
+
+# Log files
+*.log
+
+# IDE/editor-specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
