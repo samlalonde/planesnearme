@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible Cards</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #E0E0E0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Card Styles */
+        .plane-card {
+            background-color: #1E1E1E;
+            color: #E0E0E0;
+            border: 2px solid #BB86FC;
+            border-radius: 8px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 400px;
+            text-align: left;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .plane-card-header {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .plane-card-header:hover {
+            background-color: #282828;
+        }
+
+        .plane-card-content {
+            display: none; /* Hidden by default */
+            padding: 15px;
+        }
+
+        .plane-card.open .plane-card-content {
+            display: block; /* Show content when card is open */
+        }
+
+        .toggle-icon {
+            font-size: 1.2em;
+            transition: transform 0.3s;
+        }
+
+        .plane-card.open .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        a {
+            color: #03DAC6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Planes Near You</h1>
+
+    <!-- Collapsible Card 1 -->
+    <div class="plane-card">
+        <div class="plane-card-header">
+            <span>Example Airline - DWI5960</span>
+            <span class="toggle-icon">▼</span>
+        </div>
+        <div class="plane-card-content">
+            <p><strong>Airline:</strong> Example Airline</p>
+            <p><strong>Flight:</strong> DWI5960</p>
+            <p><strong>Altitude:</strong> 1,850 ft</p>
+            <p><strong>Distance:</strong> 2.7 nm</p>
+            <p>
+                <strong>Track:</strong>
+                <a href="https://www.flightaware.com/live/flight/DWI5960" target="_blank">FlightAware</a> |
+                <a href="https://www.flightradar24.com/DWI5960" target="_blank">Flightradar24</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Collapsible Card 2 -->
+    <div class="plane-card">
+        <div class="plane-card-header">
+            <span>Another Airline - ABC123</span>
+            <span class="toggle-icon">▼</span>
+        </div>
+        <div class="plane-card-content">
+            <p><strong>Airline:</strong> Another Airline</p>
+            <p><strong>Flight:</strong> ABC123</p>
+            <p><strong>Altitude:</strong> 30,000 ft</p>
+            <p><strong>Distance:</strong> 5.2 nm</p>
+            <p>
+                <strong>Track:</strong>
+                <a href="https://www.flightaware.com/live/flight/ABC123" target="_blank">FlightAware</a> |
+                <a href="https://www.flightradar24.com/ABC123" target="_blank">Flightradar24</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Collapsible Card 3 -->
+    <div class="plane-card">
+        <div class="plane-card-header">
+            <span>Yet Another Airline - XYZ789</span>
+            <span class="toggle-icon">▼</span>
+        </div>
+        <div class="plane-card-content">
+            <p><strong>Airline:</strong> Yet Another Airline</p>
+            <p><strong>Flight:</strong> XYZ789</p>
+            <p><strong>Altitude:</strong> 10,500 ft</p>
+            <p><strong>Distance:</strong> 1.8 nm</p>
+            <p>
+                <strong>Track:</strong>
+                <a href="https://www.flightaware.com/live/flight/XYZ789" target="_blank">FlightAware</a> |
+                <a href="https://www.flightradar24.com/XYZ789" target="_blank">Flightradar24</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Add click event listeners to toggle cards
+        document.querySelectorAll('.plane-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

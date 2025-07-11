@@ -1,0 +1,364 @@
+/* General styles */
+body {
+    font-family: 'Lucida Console', monospace;
+    background: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+h1 {
+    font-size: 2.5em;
+    color: #E0E0E0;
+    margin: 20px 0;
+}
+
+h2 {
+    color: #E0E0E0;
+    margin: 0 20 0 0;
+}
+
+
+
+/* Controls */
+#controls {
+    background-color: #303030;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 10px; /* Adds spacing between the items */
+}
+#controls > * {
+    width: 100%; /* Optional: Makes each element take up the full width */
+    max-width: 300px; /* Optional: Limits the maximum width */
+}
+#controls label,
+#controls select {
+    display: block; /* Ensures each element takes up its own line */
+    text-align: center; /* Centers the text inside the label and dropdown */
+    margin: 0 auto; /* Centers the elements horizontally within the container */
+}
+
+button {
+    background-color: #03DAC6;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+}
+
+
+/* Table styles */
+/* Style for the table */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Merge table borders */
+    background-color: #1E1E1E; /* Dark background */
+    color: #E0E0E0; /* Light text */
+    border: 2px solid #BB86FC; /* Accent border for the entire table, including the bottom */
+    font-size: 14px;
+    margin: 0 auto; /* Center table horizontally */
+}
+
+/* Responsive table container */
+#planeData {
+    max-width: 100%; /* Ensure the table fits within its parent */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    margin-top: 0; 
+    padding-top: 10; 
+    white-space: nowrap; /* Prevent table cells from wrapping */
+    padding-left: 10px; /* Add left padding */
+    padding-right: 10px; /* Add right padding */
+    box-sizing: border-box; /* Include padding in the width */
+    overflow-x: hidden;
+}
+
+/* Table styles for smaller screens */
+@media (max-width: 600px) {
+    #planeData {
+        padding-left: 35px; /* Ensure visibility on smaller screens */
+        padding-right: 15px;
+    }
+    table {
+        font-size: 12px; /* Adjust table font size */
+    }
+    table thead th,
+    table tbody td {
+        padding: 5px; /* Reduce padding for better fit */
+    }
+}
+
+/* Table header styling */
+table thead th {
+    background-color: #282828; /* Slightly lighter dark background for header */
+    color: #BB86FC; /* Accent color for text */
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #BB86FC; /* Accent bottom border for the header row */
+}
+
+/* Table rows styling */
+table tbody tr {
+    border-bottom: 1px solid #2A2A2A; /* Subtle border between rows */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #1A1A1A; /* Alternate row background for better readability */
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #1E1E1E; /* Default row background */
+}
+
+/* Table cells styling */
+table tbody td {
+    padding: 10px;
+    border-right: 1px solid #2A2A2A; /* Subtle border between columns */
+}
+
+/* Remove the last column border */
+table tbody td:last-child {
+    border-right: none;
+}
+
+/* Hover effect for rows */
+table tbody tr:hover {
+    background-color: #282828; /* Slightly brighter background on hover */
+    color: #03DAC6; /* Highlight text color */
+}
+
+/* Links inside the table */
+table tbody td a {
+    color: #03DAC6; /* Teal link color */
+    text-decoration: none; /* Remove underline */
+}
+
+table tbody td a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* No planes message styling */
+#output h2 {
+    margin-bottom: 5px; /* Reduce the space below the "Planes Near You" text */
+}
+
+#planeData {
+    max-width: 600px; /* Ensure the container fits within its parent */
+    margin-top: 0;
+    padding-top: 0;
+    white-space: normal; /* Change from pre-wrap to normal */
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+#planeData p {
+    color: #a0a0a0;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+
+/* END OF TABLE */
+/* END OF TABLE */
+/* END OF TABLE */
+
+/* Style for the dropdown menu */
+#radius {
+    background-color: #1E1E1E; /* Dark background */
+    color: #E0E0E0; /* Light text color */
+    border: 1px solid #03DAC6; /* Subtle accent border */
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    appearance: none; /* Remove default styling */
+    cursor: pointer;
+}
+
+/* Style for hover and focus states */
+#radius:hover {
+    background-color: #282828; /* Slightly lighter gray for hover */
+    border-color: #03DAC6; /* Change border color on hover */
+}
+
+#radius:focus {
+    outline: none;
+    border-color: #03DAC6; /* Accent border for focus */
+    box-shadow: 0 0 4px #03DAC6; /* Glow effect for focus */
+}
+
+/* Style for the dropdown options */
+#radius option {
+    background-color: #1E1E1E; /* Dark background for options */
+    color: #E0E0E0; /* Light text for readability */
+}
+
+/* Center the My Location text */
+#myLocation {
+    text-align: center; /* Centers the text horizontally */
+    margin: 0 20 0 0; /* Center horizontally within its container */
+    display: block;
+}
+
+/* Google Maps link */
+#googleMapsLink {
+    display: block;
+    color: #03DAC6;
+    margin-top: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+
+#googleMapsLink:hover {
+    text-decoration: underline;
+}
+
+footer {
+    font-size: 13px;
+    text-align: center; 
+    padding: 10px 0; 
+    line-height: 18px;
+    max-width: 600px;
+}
+
+footer a {
+    color: #03DAC5;
+    text-decoration: none;
+    
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p:first-of-type {
+    color: #a0a0a0; /* Replace with your desired color */
+}
+
+/* About Page */
+body.about-page {
+    background-color: #121212;
+    color: #d3d3d3;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 1em; 
+}
+
+body.about-page header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1A1A1A;
+}
+
+body.about-page main {
+    max-width: 600px; 
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+body.about-page h1 {
+    font-size: 2.5em;
+    color: #E0E0E0;
+    margin: 20px 0;
+}
+body.about-page h2 {
+    font-size: 1.25em;
+    color: #d3d3d3;
+    margin: 20px 0;
+}
+
+body.about-page a {
+    color: #03DAC5;
+    text-decoration: none;
+}
+
+body.about-page a:hover {
+    text-decoration: underline;
+}
+
+/* Card Styles */
+.plane-card {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    border: 2px solid #BB86FC;
+    border-radius: 8px;
+    margin: 5px 0; /* Reduce vertical margin */
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.plane-card-header {
+    padding: 10px; /* Reduced padding for tighter layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px; /* Ensure header text is not too large */
+    line-height: 1.2; /* Tighten header spacing */
+}
+
+.plane-card-header:hover {
+    background-color: #282828; /* Highlight header on hover */
+}
+
+.plane-card-content {
+    padding: 8px; /* Compact padding for content */
+    margin: 0; /* Remove extra margin */
+    display: none; /* Hidden by default */
+    font-size: 14px; /* Consistent font size for content */
+    line-height: 1.2; /* Tighten line spacing */
+}
+
+.plane-card-content p {
+    margin: 5px 0; /* Minimize space between paragraphs */
+}
+
+.plane-card.open .plane-card-content {
+    display: block; /* Show content when card is open */
+}
+
+.toggle-icon {
+    font-size: 1em; /* Adjust toggle icon size */
+    transition: transform 0.3s; /* Smooth animation */
+}
+
+.plane-card.open .toggle-icon {
+    transform: rotate(180deg); /* Rotate icon when open */
+}
+
+a {
+    color: #03DAC6; /* Teal link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}

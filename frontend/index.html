@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanesNear.Me ✈</title>
+    <meta name="description" content="See what planes are near you!">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <h1>✈ PlanesNear.Me ✈</h1>
+    <div id="controls">
+        <button id="getLocation">Get My Location</button>
+        <select id="radius">
+            <option value="1">1nm</option>
+            <option value="5" selected>5 nautical miles</option>
+            <option value="10">10nm</option>
+            <option value="25">25nm</option>
+            <option value="50">50nm</option>
+            <option value="100">100nm</option>
+            <option value="250">250nm</option>
+        </select>
+        <button id="fetchData">Fetch Planes</button>
+    </div>
+    <div id="output">
+        <h2>Planes Near You</h2>
+        <div id="planeData"><p>See what planes are nearby. Simply hit the "Get My Location" button and choose the radius (in nautical miles), then click "Fetch Planes." You'll get a list of planes closest to you and can track them on FlightAware or FlightRadar24.</p></div>
+    </div>
+    <footer>
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <p>This website does <strong>not</strong> track any personally identifiable information. The displayed location coordinates may be different than your actual location because of a number of things including browser, ISP, or VPN settings.</p>
+        <p>PlanesAround.Me was created by Sam Lalonde. <br /><a href="about.html">You can learn more here.</a></p>
+    </footer>
+</body>
+</html>
